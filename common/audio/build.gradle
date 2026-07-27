@@ -1,0 +1,26 @@
+plugins {
+  id 'quran.android.library.android'
+  alias libs.plugins.kotlin.parcelize
+  alias libs.plugins.metro
+  // needed for the stability of various model classes
+  alias libs.plugins.compose.compiler
+}
+
+android.namespace 'com.quran.labs.androidquran.common.audio'
+
+dependencies {
+  implementation project(":common:di")
+  implementation project(":common:data")
+  implementation project(":common:download")
+  testImplementation project(":pages:data:madani")
+
+  implementation libs.androidx.annotation
+  implementation libs.kotlinx.coroutines.core
+  implementation libs.okio
+  // required whenever we include the compiler plugin
+  implementation libs.compose.runtime
+
+  testImplementation libs.junit
+  testImplementation libs.truth
+  testImplementation libs.okio.fakefilesystem
+}

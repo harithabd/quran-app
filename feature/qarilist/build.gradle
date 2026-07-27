@@ -1,0 +1,32 @@
+plugins {
+  id 'quran.android.library.compose'
+  alias libs.plugins.metro
+}
+
+android.namespace 'com.quran.mobile.feature.qarilist'
+
+dependencies {
+  implementation project(path: ':common:audio')
+  implementation project(path: ':common:data')
+  implementation project(path: ':common:ui:core')
+
+  implementation libs.androidx.annotation
+
+  // compose
+  implementation libs.compose.animation
+  implementation libs.compose.foundation
+  implementation libs.compose.material
+  implementation libs.compose.material3
+  implementation libs.compose.ui
+
+  // implementation but removed for release builds
+  implementation libs.compose.ui.tooling
+  implementation libs.compose.ui.tooling.preview
+
+  // immutable collections
+  implementation libs.kotlinx.collections.immutable
+
+  // coroutines
+  implementation libs.kotlinx.coroutines.core
+  implementation libs.kotlinx.coroutines.android
+}

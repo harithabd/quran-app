@@ -1,0 +1,9 @@
+plugins {
+  id 'quran.android.library'
+  alias libs.plugins.metro
+}
+
+dependencies {
+  implementation project(":common:analytics")
+  implementation libs.androidx.annotation
+}

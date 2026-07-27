@@ -1,0 +1,14 @@
+plugins {
+  id 'quran.android.library.android'
+  alias libs.plugins.metro
+}
+
+android.namespace 'com.quran.mobile.common.download'
+
+dependencies {
+  implementation project(":common:data")
+
+  // coroutines
+  implementation libs.kotlinx.coroutines.core
+  implementation libs.kotlinx.coroutines.android
+}

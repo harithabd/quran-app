@@ -1,0 +1,20 @@
+plugins {
+  id 'quran.android.library'
+  alias libs.plugins.metro
+  alias libs.plugins.ksp
+  // needed for the stability of various model classes
+  alias libs.plugins.compose.compiler
+}
+
+dependencies {
+  implementation libs.androidx.annotation
+
+  implementation libs.kotlinx.coroutines.core
+  implementation libs.kotlinx.coroutines.android
+
+  // required whenever we include the compiler plugin
+  implementation libs.compose.runtime
+
+  implementation libs.moshi
+  ksp(libs.moshi.codegen)
+}

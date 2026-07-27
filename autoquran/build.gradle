@@ -1,0 +1,44 @@
+plugins {
+  id 'quran.android.application'
+  id 'org.jetbrains.kotlin.android'
+  alias libs.plugins.metro
+}
+
+android {
+  defaultConfig {
+    applicationId "com.quran.labs.autoquran"
+    versionCode 1
+    versionName "1.0"
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+
+    named("debug") {
+      matchingFallbacks += "release"
+    }
+  }
+}
+
+android.namespace = "com.quran.labs.autoquran"
+
+dependencies {
+  implementation project(":feature:autoquran")
+  implementation project(":common:di")
+  implementation project(":common:data")
+  implementation project(":common:pages")
+  implementation project(":common:audio")
+  // should be api in modules that implement LocalDataUpgrade
+  implementation project(":common:upgrade")
+
+  if (new File(rootDir, "extras/extras.gradle").exists()) {
+    implementation project(":extras:pages:default")
+  } else {
+    implementation project(":pages:madani")
+  }
+}

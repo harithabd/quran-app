@@ -1,0 +1,17 @@
+plugins {
+  id 'quran.android.library.android'
+  alias libs.plugins.metro
+}
+
+android.namespace "com.quran.mobile.feature.firebase_analytics"
+android.buildFeatures.buildConfig = true
+
+dependencies {
+  implementation project(path: ':common:pages')
+  implementation project(path: ':common:analytics')
+
+  implementation libs.androidx.annotation
+
+  implementation libs.firebase.analytics
+  implementation libs.firebase.crashlytics
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="memorization_test_title">Memorization Test</string>
+  <string name="memorization_mode_hide_words">Hide some words</string>
+  <string name="memorization_mode_fill_in_blank">Fill in the blank</string>
+  <string name="memorization_mode_next_ayah">Recall next ayah</string>
+  <string name="memorization_prompt_hide_words">Fill in the missing word(s):</string>
+  <string name="memorization_prompt_next_ayah">Type the next ayah in full:</string>
+  <string name="memorization_answer_hint">Type the missing word(s), separated by spaces</string>
+  <string name="memorization_submit">Check answer</string>
+  <string name="memorization_next_question">Next verse</string>
+  <string name="memorization_score_format">%1$d / %2$d correct</string>
+  <string name="memorization_perfect">Perfect! Alhamdulillah.</string>
+  <string name="memorization_not_perfect">Keep practicing \u2014 review and try again.</string>
+  <string name="memorization_loading">Loading a verse\u2026</string>
+  <string name="memorization_no_next_ayah">This is the last ayah of the Quran \u2014 picking a new verse instead.</string>
+  <string name="memorization_streak_format">Box %1$d \u00b7 next review in %2$d day(s)</string>
+</resources>
